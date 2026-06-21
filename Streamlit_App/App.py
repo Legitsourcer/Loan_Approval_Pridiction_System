@@ -45,9 +45,13 @@ def set_background(image_path):
     """
     st.markdown(page_bg, unsafe_allow_html=True)
 
-# Change path if needed
-set_background("..\image\loan.jpg")
+IMAGE_PATH = os.path.join(
+    BASE_DIR,
+    "image",
+    "loan.jpg"
+)
 
+set_background(IMAGE_PATH)
 
 
 st.markdown(
