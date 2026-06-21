@@ -2,7 +2,19 @@ import streamlit as st
 import pandas as pd
 import joblib
 import base64
+import os
 # Load Model
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+MODEL_PATH = os.path.join(
+    BASE_DIR,
+    "..",
+    "Model",
+    "random_forest_model.pkl"
+)
+
+model = joblib.load(MODEL_PATH)
+
+
 model = joblib.load("../Model/random_forest_model.pkl")
 def set_background(image_path):
     with open(image_path, "rb") as img:
