@@ -3,7 +3,7 @@ import pandas as pd
 import joblib
 import base64
 # Load Model
-model = joblib.load(r"C:\Loan_Approval_Pridiction_System\Model\random_forest_model.pkl")
+model = joblib.load("../Loan_Approval_Pridiction_System\Model\random_forest_model.pkl")
 def set_background(image_path):
     with open(image_path, "rb") as img:
         encoded = base64.b64encode(img.read()).decode()
@@ -34,7 +34,7 @@ def set_background(image_path):
     st.markdown(page_bg, unsafe_allow_html=True)
 
 # Change path if needed
-set_background("C:\Loan_Approval_Pridiction_System\Streamlit_App\image\loan.jpg")
+set_background("..\Streamlit_App\image\loan.jpg")
 
 
 
